@@ -1,0 +1,48 @@
+/** 
+// 
+content style Down below
+*/
+.container #workers {
+    max-width:100%;
+    height:auto ;
+    width: 700px;
+    float: right;
+    bottom: 90%;
+  }
+  .sub_container {
+   padding-right: 10%;
+   margin: 5%;
+top:0%;
+bottom: 30%;
+   /* background-color: rgb(59, 42, 42); */
+  }
+ .title {font-size: 55pt;
+         padding:0;
+         margin: 0;
+         font-family: 'lato' , sans-serif, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif 
+}
+  .sub_title  {      font-size: 22pt;   
+     font-family: 'lato' , sans-serif, 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif 
+  }
+  .submit__Button {
+  border-radius: 44px;;
+  -moz-outline-radius: 30%;
+  font-size: 35pt;
+  margin: 4%;
+  color: white;
+  background-color:#145F13;
+  font-family:Poppins,sans-serif,'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+  width: 268px;
+  height: 77px; 
+  border: none;
+  
+  -webkit-box-shadow: -5px -24px 28px -13px rgba(43,156,49,1);
+  -moz-box-shadow: -5px -24px 28px -13px rgba(43,156,49,1);
+  box-shadow: -5px -24px 28px -13px rgba(43,156,49,1);
+  }
+
+
+
+  @media (max-width: 768px) {
+    #title{font-size: 14px;}
+  }
