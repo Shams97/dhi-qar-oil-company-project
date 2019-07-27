@@ -1,10 +1,19 @@
 import React, { Component } from 'react';
-import coWorker from './assets/co-work.jpeg';
-import login from './components/LogIn/logIn'
 import Toolbar from './components/Toolbar/Toolbar';
 import SideDrawer from './components/SideDrawer/SideDrawer';
 import Backdrop from './components/Backdrop/Backdrop';
+import Home from './components/home/home';
+import About from './components/about/about';
+import Contact from './components/contact/contact';
+import Deparment from './components/departments/department';
+
 import './App.css';
+
+import {
+  Route,
+  Switch,
+  Redirect
+} from 'react-router-dom';
 
 class App extends Component {
   state = {
@@ -13,12 +22,12 @@ class App extends Component {
 
   drawerToggleClickHandler = () => {
     this.setState((prevState) => {
-      return {sideDrawerOpen: !prevState.sideDrawerOpen};
+      return { sideDrawerOpen: !prevState.sideDrawerOpen };
     });
   };
 
   backdropClickHandler = () => {
-    this.setState({sideDrawerOpen: false});
+    this.setState({ sideDrawerOpen: false });
   };
 
   render() {
@@ -28,21 +37,24 @@ class App extends Component {
       backdrop = <Backdrop click={this.backdropClickHandler} />
     }
     return (
-      <div style={{height: '100%'}}>
+      <div style={{ height: '100%' }}>
         <Toolbar drawerClickHandler={this.drawerToggleClickHandler} />
         <SideDrawer show={this.state.sideDrawerOpen} />
         {backdrop}
-        <main style={{marginTop: '14px'}}>
-          <div className="container">
-                    <img  id="workers"src={coWorker} />
-                          <div className="sub_container">
-                              <p className="title">For the best file Modification</p>
-                              <p className="sub_title">Local website for modify ﬁles for our employees  This service make ofﬁce work more easy </p>
-                              <button className="submit__Button"  type='submit'>Log In</button>
-                          </div> 
-                          </div>
-        </main>
-        
+
+        {/* Start App intro 
+              And Route code  */}
+
+        <div className="App-intro">
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route path="/deparment" component={Deparment} />
+            <Route path="/contact" component={Contact} />
+            <Route path="/about" component={About} />
+            <Redirect to="/" />
+          </Switch>
+        </div>
+
       </div>
     );
   }

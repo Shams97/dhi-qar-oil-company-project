@@ -1,8 +1,23 @@
-/* body{background-color: #F5F5F5;} */
+ body{background-color: #F5F5F5;} 
 
-/* .container {
+ .container {
     border-left-width:5px;
     border-right-width: 5px;
 
-} */
+} 
 /* #email{} */
+
+.submitLink:hover ,.submitLink:active {
+  background-color: #F5F5F5;
+}
+@media all and (min-width: 480px) {
+    .Login {
+      padding: 60px 0;
+    }
+  
+    .Login form {
+      margin: 0 auto;
+      max-width: 320px;
+    }
+  }
+  
